@@ -13,7 +13,7 @@ func TestS3Website(t *testing.T) {
   terraformOptions := &terraform.Options{
     TerraformDir: "../terraform",
     Vars: map[string]interface{}{
-      "bucket_name": "my-static-site-test-bucket",
+      "bucket_name": "akil-s3-static-site-test-bucket",
     },
   }
 
