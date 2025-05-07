@@ -27,14 +27,14 @@ jobs:
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
     - name: Terraform Plan
-      run: terraform plan -var="bucket_name=my-static-site-poc"
+      run: terraform plan -var="bucket_name=my-static-site-poc-${{ github.run_id }}"
       working-directory: ./terraform
       env:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
     - name: Terraform Apply
-      run: terraform apply -auto-approve -var="bucket_name=my-static-site-poc"
+      run: terraform apply -auto-approve -var="bucket_name=my-static-site-poc-${{ github.run_id }}"
       working-directory: ./terraform
       env:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
