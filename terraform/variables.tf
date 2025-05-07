@@ -3,8 +3,9 @@ variable "bucket_name" {
   type        = string
 }
 
-variable "bucket_region" {
-    description = "my default bucket region"
-    type = string
-    default = "eu-west-2"
-}
+
+#variable "bucket_region" {
+ #   description = "my default bucket region"
+  #  type = string
+   # default = "eu-west-2"
+#}
