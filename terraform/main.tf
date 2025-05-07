@@ -4,7 +4,7 @@ provider "aws" {
 
 resource "aws_s3_bucket" "static_site" {
   bucket = var.bucket_name
-  acl    = "public-read"
+  #acl    = "public-read"
 
   website {
     index_document = "index.html"
